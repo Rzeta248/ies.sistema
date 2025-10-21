@@ -43,4 +43,46 @@
     button{background:var(--azul);color:var(--beige);border:none;font-weight:700;cursor:pointer}
 
     footer{padding:18px;text-align:center;color:var(--muted);font-size:.9rem}
+    /* ----- AJUSTES PARA CELULARES ----- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  header .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header .brand img {
+    width: 120px;
+    height: auto;
+  }
+
+  header .brand h1 {
+    font-size: 1.1rem;
+  }
+
+  header .brand p {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
     
+
