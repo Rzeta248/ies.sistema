@@ -8,42 +8,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
   <style>
-    .galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.galeria img {
-  width: 100%;
-  height: 180px;            /* 🔹 Altura uniforme para todas las imágenes */
-  object-fit: cover;        /* 🔹 Recorta sin deformar */
+    /* ---- ESTILO GENERAL DE IMÁGENES ---- */
+.seccion img,
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.galeria img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+.seccion img:hover,
+section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
+/* ---- GALERÍA ---- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+.galeria img,
 .galeria video,
 .galeria iframe {
   width: 100%;
-  height: 180px;         /* mismo alto que las imágenes */
-  border-radius: 10px;
+  height: 200px;
   object-fit: cover;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.galeria img:hover,
 .galeria video:hover,
 .galeria iframe:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-} 
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .galeria img,
+  .galeria video,
+  .galeria iframe {
+    height: 160px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -64,10 +92,10 @@
       <a href="plan_de_estudio.html">Plan</a>
     </nav>
   </header>
-  <section>
+  <section class="seccion">
     <h1>Proyecto Mini CNC con Arduino</h1>
     <p>El Mini CNC con Arduino es una máquina de control numérico capaz de mover un lápiz o pluma sobre una superficie en los ejes X, Y y Z. Utiliza un Arduino Nano, dos motores paso a paso controlados por drivers L293D y un servomotor SG90 para levantar o bajar el lápiz. Este sistema puede interpretar comandos G-code a través de Arduino IDE.</p>
-    <img src="imagenes/cnc.jpg" alt="proyecto CNC" style="width:600px;display:block;margin:auto">
+    <img src="imagenes/cnc.jpg" alt="proyecto CNC">
   </section>
     <section>
         <h2>Diagrama de conexión</h2>
@@ -520,6 +548,7 @@ void penDown() {
 }
 </pre>
 </section> 
+<!--
 <section id="galeria" class="seccion">
     <h2>Galería del Proyecto</h2>
     <div class="galeria">
@@ -531,11 +560,12 @@ void penDown() {
       <img src="" alt="">
       <img src="" alt="">
 
-       <!-- 🔹 Video agregado -->
     <video controls>
       <source src="videoauto.mp4" type="video/mp4">
       Tu navegador no soporta la reproducción de video.
     </video>
+    </div>
+</section> -->
 <footer>
     <p>Instituto Dr. Alfredo Loutaif — Tec. Sup. Análisis de Sistemas y Desarrollo de Software • Encuentro Provincial de Practicas y Residencias Educativas 2025</p>
   </footer>

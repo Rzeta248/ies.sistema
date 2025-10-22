@@ -8,6 +8,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
   <style>
+    /* ---- ESTILO GENERAL DE IMÁGENES ---- */
+.seccion img,
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seccion img:hover,
+section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ---- GALERÍA ---- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+.galeria img,
+.galeria video,
+.galeria iframe {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover,
+.galeria video:hover,
+.galeria iframe:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .galeria img,
+  .galeria video,
+  .galeria iframe {
+    height: 160px;
+  }
+}
+
     .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -66,11 +130,11 @@
   </header>
   <section>
     <h1>Juego de Ping Pong </h1>
-    <img src="imagenes/pinpong.jpg" alt="Juego de Ping Pong" style="width:600px;display:block;margin:auto">
+    <img src="imagenes/pinpong.jpg" alt="Juego de Ping Pong">
   </section>
     <section>
         <h2>Diagrama de conexión</h2>
-        <img src="imagenes/diagrama_pinpong.jpg" alt="Diagrama de conexión del Juego de Ping Pong" style="display:block; margin:auto">>
+        <img src="imagenes/diagrama_pinpong.jpg" alt="Diagrama de conexión del Juego de Ping Pong">
     </section>
     <section>
         <h2>Código del proyecto</h2>
@@ -346,6 +410,7 @@ void DestellarTodosLosLEDs(int contadorDestellos, int jugador)
 }
 </pre>
 </section>
+<!--
 <section id="galeria" class="seccion">
     <h2>Galería del Proyecto</h2>
     <div class="galeria">
@@ -356,12 +421,12 @@ void DestellarTodosLosLEDs(int contadorDestellos, int jugador)
       <img src="" alt="">
       <img src="" alt="">
       <img src="" alt="">
-
-       <!-- 🔹 Video agregado -->
     <video controls>
       <source src="videoauto.mp4" type="video/mp4">
       Tu navegador no soporta la reproducción de video.
     </video>
+    </div>
+  </section> -->
 <footer>
     <p>Instituto Dr. Alfredo Loutaif — Tec. Sup. Análisis de Sistemas y Desarrollo de Software • Encuentro Provincial de Practicas y Residencias Educativas 2025</p>
   </footer>

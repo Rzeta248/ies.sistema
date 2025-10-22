@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
   <style>
-    .seccion img{ width: 500px;display: block;margin:auto}
+    .seccion img{max-width: 100%;display: block;margin: 15px auto;border-radius: 10px;transition: transform 0.4s, box-shadow 0.4s;}
     .galeria img{ width:300px;}
     .galeria {
   display: grid;
@@ -45,7 +45,8 @@
 .galeria iframe:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-} 
+}
+
   </style>
 </head>
 <body>
@@ -73,7 +74,7 @@
       Este proyecto utiliza una placa <strong>Arduino UNO</strong> junto con varios servomotores para mover un brazo robótico impreso en 3D.
       El control se realiza mediante <strong>dos joysticks analógicos</strong>, lo que permite manipular la base, el hombro, el codo y la pinza.
     </p>
-    <img src="imagenes/brazo.jpg" alt="Brazo Robótico" class="principal">
+    <img src="imagenes/brazo.jpg" alt="Brazo Robótico" class="principal" width="400px">
   </section>
 
   <section id="componentes" class="seccion">
