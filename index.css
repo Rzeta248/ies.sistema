@@ -90,7 +90,7 @@ pre {
   border-radius: 8px;
   overflow-x: auto;
   font-size: 14px;
-  max-height: 500px;
+  max-height: 400px;
   white-space: pre;
 }
 code {
