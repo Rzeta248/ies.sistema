@@ -10,6 +10,42 @@
   <style>
     .seccion img{ width: 500px;display: block;margin:auto}
     .galeria img{ width:300px;}
+    .galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 180px;            /* 🔹 Altura uniforme para todas las imágenes */
+  object-fit: cover;        /* 🔹 Recorta sin deformar */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.galeria img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.galeria video,
+.galeria iframe {
+  width: 100%;
+  height: 180px;         /* mismo alto que las imágenes */
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria video:hover,
+.galeria iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+} 
   </style>
 </head>
 <body>
@@ -24,8 +60,8 @@
     </div>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="index.html">Sobre</a>
-      <a href="index.html">Propuesta Educativa</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#propuesta">Propuesta Educativa</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="plan_de_estudio.html">Plan</a>
     </nav>
@@ -61,7 +97,7 @@
     </ul>
   </section>
 
-  <section id="galeria" class="seccion">
+  <!--<section id="galeria" class="seccion">
     <h2>Galería del Proyecto</h2>
     <div class="galeria">
       <img src="imagenes/brazo.jpg" alt="Brazo robótico armado" style="display: block; margin: auto;"> <br>
@@ -74,12 +110,12 @@
         Tu navegador no soporta la reproducción de videos.
       </video>
     </div>
-  </section>
+  </section> -->
 
   <section id="codigo" class="seccion">
     <h2>Código Arduino</h2>
     <p>A continuación se muestra el código utilizado para controlar el brazo robótico mediante los joysticks:</p>
-    <pre>
+    <pre><code>
 #include <Servo.h>
 
 // Servos
@@ -184,7 +220,24 @@ void loop() {
   Serial.print(" C:"); Serial.print(codoPos);
   Serial.print(" P:"); Serial.println(pinzaPos);
 }
-    </pre>
+</code>    
+</pre>
+</section>
+  
+<section id="galeria" class="seccion">
+    <h2>Galería del Proyecto</h2>
+    <div class="galeria">
+      <img src="imagenes/brazo.jpg" alt="">  
+      <img src="imagenes/esquema_brazo.jpg" alt="Auto con Arduino">
+      <img src="imagenes/robot2.jpg" alt="Placa Arduino UNO">
+      <img src="imagenes/robot3.jpg" alt="Módulo Bluetooth HC-05">
+      <img src="imagenes/robot.jpg" alt="Driver L298N">
+       <!-- 🔹 Video agregado -->
+    <video controls>
+      <source src="videoauto.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+    </div>
   </section>
    <footer>
     <p>Instituto Dr. Alfredo Loutaif — Tec. Sup. Análisis de Sistemas y Desarrollo de Software • Encuentro Provincial de Practicas y Residencias Educativas 2025</p>

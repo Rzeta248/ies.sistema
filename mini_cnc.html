@@ -7,6 +7,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <style>
+    .galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 180px;            /* 🔹 Altura uniforme para todas las imágenes */
+  object-fit: cover;        /* 🔹 Recorta sin deformar */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.galeria img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.galeria video,
+.galeria iframe {
+  width: 100%;
+  height: 180px;         /* mismo alto que las imágenes */
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria video:hover,
+.galeria iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+} 
+  </style>
 </head>
 <body>
   <header>
@@ -20,8 +58,8 @@
     </div>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="index.html">Sobre</a>
-      <a href="index.html">Propuesta Educativa</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#propuesta">Propuesta Educativa</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="plan_de_estudio.html">Plan</a>
     </nav>
@@ -482,6 +520,22 @@ void penDown() {
 }
 </pre>
 </section> 
+<section id="galeria" class="seccion">
+    <h2>Galería del Proyecto</h2>
+    <div class="galeria">
+      <img src="" alt="">  
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+
+       <!-- 🔹 Video agregado -->
+    <video controls>
+      <source src="videoauto.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
 <footer>
     <p>Instituto Dr. Alfredo Loutaif — Tec. Sup. Análisis de Sistemas y Desarrollo de Software • Encuentro Provincial de Practicas y Residencias Educativas 2025</p>
   </footer>

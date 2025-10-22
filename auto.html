@@ -70,8 +70,6 @@ img:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-
-/* ======== GALERÍA ======== */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -93,7 +91,6 @@ img:hover {
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* ======== VIDEOS EN GALERÍA ======== */
 .galeria video,
 .galeria iframe {
   width: 100%;
@@ -109,6 +106,7 @@ img:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 } 
+
   </style>
 </head>
 <body>
@@ -123,8 +121,8 @@ img:hover {
     </div>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="index.html">Sobre</a>
-      <a href="index.html">Propuesta Educativa</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#propuesta">Propuesta Educativa</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="plan_de_estudio.html">Plan</a>
     </nav>
@@ -179,7 +177,7 @@ img:hover {
     </section>
   </div>
 
-    <pre>
+    <pre> <code>
 // Control de Auto Bluetooth con Arduino UNO
 
 // Pines para el driver L298N
@@ -378,6 +376,7 @@ void prenderled() {digitalWrite(LEDUP,HIGH);
                    delay(100);
                    digitalWrite(LEDUP,LOW);
                    delay(100);}
+    </code>
    </pre>
   </section>
 
